@@ -1,4 +1,38 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef de Cozinha | Gastronomia de Excelência</title>
+    <style>
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header e Navegação */
+        header {
+            background-color: #1a1a1a;
+            color: #d4af37; /* Dourado */
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 4px solid #d4af37;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,5 +41,138 @@
 </head>
 <body>
     
+</body>
+</html>
+
+        header p {
+            color: #fff;
+            font-style: italic;
+        }
+
+        /* Seção Principal */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .perfil {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .perfil img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #d4af37;
+        }
+
+        /* Especialidades (Cards) */
+        .grid-especialidades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            border-top: 5px solid #1a1a1a;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-top-color: #d4af37;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            text-align: center;
+        }
+
+        /* Rodapé */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .btn-contato {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a1a1a;
+            padding: 10px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .perfil {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Chef [Seu Nome Aqui]</h1>
+        <p>A arte de transformar ingredientes em experiências memoráveis</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="perfil">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=500" alt="Foto do Chef">
+            <div>
+                <h2>Sobre Mim</h2>
+                <p>Com mais de [X] anos de experiência na alta gastronomia, especializei-me em [Sua Especialidade, ex: Cozinha Contemporânea]. Minha filosofia de cozinha baseia-se no respeito ao ingrediente e na busca constante pelo equilíbrio entre técnica clássica e inovação.</p>
+                <p>Já atuei em cozinhas renomadas e hoje dedico-me a [Consultoria / Eventos Privados / Seu Restaurante].</p>
+            </div>
+        </section>
+
+        <h2>Minhas Especialidades</h2>
+        
+        <div class="grid-especialidades">
+            <div class="card">
+                <h3>Cozinha Autoral</h3>
+                <p>Criação de menus exclusivos baseados na sazonalidade dos produtos.</p>
+            </div>
+            <div class="card">
+                <h3>Eventos Privados</h3>
+                <p>Experiência de fine dining no conforto da sua residência ou empresa.</p>
+            </div>
+            <div class="card">
+                <h3>Consultoria</h3>
+                <p>Desenvolvimento de cardápios e treinamento de brigadas de cozinha.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Entre em contato para orçamentos e parcerias</p>
+        <a href="mailto:seuemail@exemplo.com" class="btn-contato">Enviar E-mail</a>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">&copy; 2026 Chef [Seu Nome]. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
