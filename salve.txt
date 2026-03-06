@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Beef | Gastronomia de Excelência</title>
+    <title>Chef de Cozinha | Gastronomia de Excelência</title>
     <style>
         /* Configurações Gerais */
         * {
@@ -24,7 +23,7 @@
         header {
             background-color: #1a1a1a;
             color: #d4af37; /* Dourado */
-            padding: 3rem 0;
+            padding: 2rem 0;
             text-align: center;
             border-bottom: 4px solid #d4af37;
         }
@@ -33,8 +32,17 @@
             font-size: 2.5rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 10px;
-        }
+        }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
 
         header p {
             color: #fff;
@@ -53,19 +61,18 @@
             align-items: center;
             gap: 2rem;
             background: white;
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
-        .perfil img {
+        .perfil <img
             width: 250px;
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid #d4af37;
-            background-color: #eee; /* Placeholder caso não tenha foto */
         }
 
         /* Especialidades (Cards) */
@@ -73,7 +80,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 3rem;
         }
 
         .card {
@@ -83,30 +89,11 @@
             text-align: center;
             transition: transform 0.3s;
             border-top: 5px solid #1a1a1a;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         .card:hover {
             transform: translateY(-10px);
-            border-top-color: #d4af37;
-        }
-
-        .detalhes-nota {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 5px solid #d4af37;
-            margin-top: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .detalhes-nota ul {
-            list-style-position: inside;
-            margin-top: 1rem;
-        }
-
-        .detalhes-nota li {
-            margin-bottom: 10px;
+            border-top-color: #d4af37;</p>
         }
 
         h2 {
@@ -133,11 +120,6 @@
             font-weight: bold;
             border-radius: 5px;
             margin-top: 10px;
-            transition: background 0.3s;
-        }
-
-        .btn-contato:hover {
-            background: #b8962d;
         }
 
         /* Responsividade */
@@ -152,45 +134,38 @@
 <body>
 
     <header>
-        <h1>The Beef</h1>
+        <h1>The beef</h1 
+    
         <p>A arte de transformar ingredientes em experiências memoráveis</p>
     </header>
 
     <div class="container">
         
         <section class="perfil">
-            <img src="https://via.placeholder.com/250" alt="Chef de Cozinha">
-            <div>
-                <p>Cozinhar é muito mais do que apenas transformar ingredientes crus em algo comestível; é uma das formas mais antigas e viscerais de expressão humana. É o ponto exato onde a precisão da ciência encontra a liberdade da arte.</p>
+         
+
+    
+    
+            </p> Cozinhar é muito mais do que apenas transformar ingredientes crus em algo comestível; é uma das formas mais antigas e viscerais de expressão humana. É o ponto exato onde a precisão da ciência encontra a liberdade da arte.</p>
             </div>
         </section>
 
-        <h2>Conheça a Carreira</h2>
+        <h2>Tudo sobre</h2>
         
         <div class="grid-especialidades">
             <div class="card">
-                <h3>Curso de Chef</h3>
-                <p>Como se tornar um chefe de cozinha profissional?</p>
+                <h3>Curso de chef</h3>
+                <p>Como se tornar um chefe de cozinha?</p>
             </div>
             <div class="card">
-                <h3>Nota de Corte</h3>
-                <p>O caminho para a faculdade de Gastronomia.</p>
+                <h3>Nota de corte</h3>
+                <p>Faculdade de Gastronomia</p>
             </div>
             <div class="card">
-                <h3>Salário</h3>
-                <p>Quanto ganha um chef de cozinha hoje?</p>
+                <h3>Salario</h3>
+                <p>Quanto guanha um chef de cozinha?</p>
             </div>
         </div>
-
-        <section class="detalhes-nota" id="nota-corte">
-            <h2>Informações de Ingresso (SiSU/Gastronomia)</h2>
-            <ul>
-                <li><strong>Melhores Faculdades do Brasil:</strong> Instituições como USP, UFRJ e UFCSPA costumam ter as notas mais altas, variando entre <strong>720 e 780 pontos</strong>.</li>
-                <li><strong>Notas de Corte Mais Baixas:</strong> Em universidades do interior ou através de políticas de cotas, é possível encontrar vagas a partir de <strong>580 a 620 pontos</strong>.</li>
-                <li><strong>Possibilidade de Intercâmbio:</strong> Muitas faculdades federais possuem convênios com institutos em Portugal, França e Itália para especialização técnica.</li>
-                <li><strong>Data da Informação:</strong> Atualizado em Março de 2026.</li>
-            </ul>
-        </section>
 
     </div>
 
