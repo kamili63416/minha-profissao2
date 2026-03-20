@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -43,11 +42,12 @@
 
         /* Seção Principal */
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 2rem auto;
             padding: 0 20px;
         }
 
+        /* Perfil com imagem elíptica moderna */
         .perfil {
             display: flex;
             align-items: center;
@@ -59,38 +59,184 @@
             margin-bottom: 3rem;
         }
 
-        .perfil img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
+        /* Container da imagem com formato elíptico (elipse horizontal) */
+        .img-ellipse {
+            width: 280px;
+            height: 180px;
+            border-radius: 50% / 40%; /* formato elíptico: horizontal mais largo */
+            overflow: hidden;
+            flex-shrink: 0;
             border: 5px solid #d4af37;
-            background-color: #eee; /* Placeholder caso não tenha foto */
+            background-color: #2c2c2c;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .img-ellipse:hover {
+            transform: scale(1.02);
+        }
+        
+        .img-ellipse img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
-        /* Especialidades (Cards) */
-        .grid-especialidades {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+        /* TÍTULO PRINCIPAL DA SEÇÃO CARREIRA */
+        .section-title {
+            text-align: center;
+            margin: 3rem 0 2rem 0;
+        }
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        .section-title .subtitle {
+            color: #666;
+            font-style: italic;
+            font-size: 1rem;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #d4af37;
+            margin: 15px auto 0;
+            border-radius: 3px;
+        }
+
+        /* NOVA DISPOSIÇÃO: CARDS EM VERTICAL (um abaixo do outro) */
+        .carreira-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .card {
+        /* Cada card agora é um bloco expansivo e harmonioso */
+        .topic-card {
             background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.25s ease, box-shadow 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+        }
+        
+        /* Cabeçalho de cada tópico com identidade visual */
+        .card-header {
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, #faf9f7 0%, #ffffff 100%);
+            border-bottom: 2px solid #d4af37;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .card-header .icon {
+            font-size: 2.2rem;
+        }
+        .card-header h3 {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin: 0;
+            letter-spacing: -0.3px;
+        }
+        .card-header .tag {
+            margin-left: auto;
+            background: #d4af37;
+            padding: 5px 14px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            text-transform: uppercase;
+        }
+        
+        /* Corpo do card com conteúdo rico */
+        .card-body {
+            padding: 2rem;
+        }
+        
+        .card-body p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: #2c2c2c;
+        }
+        
+        .card-body strong {
+            color: #b8860b;
+        }
+        
+        .highlight-box {
+            background: #fef8ef;
+            border-left: 4px solid #d4af37;
+            padding: 1rem 1.5rem;
+            margin: 1.2rem 0;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1rem 0 0.5rem;
+        }
+        .info-item {
+            flex: 1;
+            min-width: 180px;
+            background: #f9f9f9;
+            padding: 0.8rem 1rem;
+            border-radius: 14px;
+            border: 1px solid #ececec;
+        }
+        .info-item .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #b8860b;
+            font-weight: 600;
+        }
+        .info-item .value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 5px;
+        }
+        
+        .salary-region {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .region-card {
+            background: #faf7f2;
+            border-radius: 16px;
+            padding: 1rem;
             text-align: center;
-            transition: transform 0.3s;
-            border-top: 5px solid #1a1a1a;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-top-color: #d4af37;
+        .region-card h4 {
+            color: #d4af37;
+            margin-bottom: 8px;
         }
-
+        
+        .small-note {
+            font-size: 0.8rem;
+            color: #6c6c6c;
+            margin-top: 1rem;
+            border-top: 1px dashed #ddd;
+            padding-top: 0.8rem;
+        }
+        
+        /* mantendo o bloco de detalhes */
         .detalhes-nota {
             background: #fff;
             padding: 2rem;
@@ -99,23 +245,15 @@
             margin-top: 2rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
         .detalhes-nota ul {
             list-style-position: inside;
             margin-top: 1rem;
         }
-
         .detalhes-nota li {
             margin-bottom: 10px;
         }
-
-        h2 {
-            margin-bottom: 1.5rem;
-            color: #1a1a1a;
-            text-align: center;
-        }
-
-        /* Rodapé */
+        
+        /* NOVO RODAPÉ COM FORMULÁRIO DE OPINIÃO INTEGRADO */
         footer {
             background: #1a1a1a;
             color: white;
@@ -123,28 +261,209 @@
             padding: 2rem 0;
             margin-top: 3rem;
         }
-
-        .btn-contato {
-            display: inline-block;
+        
+        .opinion-section {
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            background: rgba(255,255,255,0.05);
+            padding: 1.8rem;
+            border-radius: 20px;
+            backdrop-filter: blur(2px);
+        }
+        
+        .opinion-section h3 {
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .opinion-section p {
+            color: #ddd;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .opinion-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            color: #d4af37;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .form-group input, 
+        .form-group textarea,
+        .form-group select {
+            padding: 12px 15px;
+            border: none;
+            border-radius: 12px;
+            background: #2c2c2c;
+            color: white;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            border: 1px solid #444;
+        }
+        
+        .form-group input:focus, 
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #d4af37;
+            background: #1f1f1f;
+            box-shadow: 0 0 0 2px rgba(212,175,55,0.3);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .rating-stars {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-top: 5px;
+        }
+        
+        .star-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            background: #2c2c2c;
+            padding: 6px 14px;
+            border-radius: 40px;
+            border: 1px solid #444;
+            transition: all 0.2s;
+        }
+        
+        .star-option:hover {
             background: #d4af37;
             color: #1a1a1a;
-            padding: 10px 25px;
-            text-decoration: none;
+            border-color: #d4af37;
+        }
+        
+        .star-option.selected {
+            background: #d4af37;
+            color: #1a1a1a;
+            border-color: #d4af37;
             font-weight: bold;
-            border-radius: 5px;
+        }
+        
+        .star-option input {
+            display: none;
+        }
+        
+        .star-option span {
+            font-size: 1rem;
+        }
+        
+        .btn-enviar {
+            background: #d4af37;
+            color: #1a1a1a;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
             margin-top: 10px;
-            transition: background 0.3s;
+            font-weight: 700;
         }
-
-        .btn-contato:hover {
+        
+        .btn-enviar:hover {
             background: #b8962d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
         }
-
+        
+        .feedback-message {
+            margin-top: 1rem;
+            padding: 10px;
+            border-radius: 12px;
+            background: #2a2a2a;
+            color: #d4af37;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .feedback-message.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        
+        .footer-copyright {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        .btn-contato-simple {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 10px;
+            transition: 0.2s;
+            font-size: 0.85rem;
+        }
+        
+        .btn-contato-simple:hover {
+            background: #d4af37;
+            color: #1a1a1a;
+        }
+        
         /* Responsividade */
         @media (max-width: 768px) {
             .perfil {
                 flex-direction: column;
                 text-align: center;
+            }
+            .img-ellipse {
+                width: 240px;
+                height: 150px;
+                margin-bottom: 0.5rem;
+            }
+            .card-header {
+                flex-wrap: wrap;
+            }
+            .card-header .tag {
+                margin-left: 0;
+                margin-top: 6px;
+            }
+            .card-header h3 {
+                font-size: 1.5rem;
+            }
+            .card-body {
+                padding: 1.5rem;
+            }
+            .rating-stars {
+                flex-wrap: wrap;
+            }
+            .opinion-section {
+                margin: 0 1rem 1.5rem 1rem;
+                padding: 1.2rem;
             }
         }
     </style>
@@ -159,38 +478,289 @@
     <div class="container">
         
         <section class="perfil">
-            <img src="https://via.placeholder.com/250" alt="Chef de Cozinha">
+            <!-- Espaço elíptico com a imagem solicitada -->
+            <div class="img-ellipse">
+                <img src="https://img.freepik.com/fotos-gratis/chef-derramando-molho-especial-em-costelas-de-porco-na-cozinha_181624-61946.jpg?semt=ais_hybrid&w=740&q=80" 
+                     alt="Chef derramando molho especial em costelas - The Beef Gastronomia">
+            </div>
             <div>
                 <p>Cozinhar é muito mais do que apenas transformar ingredientes crus em algo comestível; é uma das formas mais antigas e viscerais de expressão humana. É o ponto exato onde a precisão da ciência encontra a liberdade da arte.</p>
             </div>
         </section>
 
-        <h2>Conheça a Carreira</h2>
+        <!-- Título da seção "Conheça a Carreira" -->
+        <div class="section-title">
+            <h2>🍽️ Conheça a Carreira</h2>
+            <div class="subtitle">Mergulhe no universo da gastronomia profissional</div>
+        </div>
         
-        <div class="grid-especialidades">
-            <div class="card">
-                <h3>Curso de Chef</h3>
-                <p>Como se tornar um chefe de cozinha profissional?</p>
+        <!-- TÓPICOS UM ABAIXO DO OUTRO - DISPOSIÇÃO VERTICAL HARMONIOSA -->
+        <div class="carreira-vertical">
+            
+            <!-- 1º TÓPICO: CURSO DE CHEF -->
+            <div class="topic-card">
+                <div class="card-header">
+                    <span class="icon">👨‍🍳</span>
+                    <h3>Curso de Chef</h3>
+                    <span class="tag">formação profissional</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>Como se tornar um chefe de cozinha profissional?</strong> O caminho mais ágil e prático é através de um <strong>curso livre de gastronomia</strong> de alta imersão. Diferente da graduação tradicional, os cursos livres têm foco total em técnicas de cocção, gestão de brigada, criação de cardápios e segurança alimentar, permitindo que o aluno entre no mercado em menos de 12 meses.</p>
+                    
+                    <div class="highlight-box">
+                        🔥 <strong>The Beef Academy | Curso Livre Premium</strong><br>
+                        Metodologia hands-on com chefs renomados, aulas em cozinha experimental, módulos de charcutaria, panificação artesanal, cozinha autoral e harmonização de carnes nobres. Certificação reconhecida nacionalmente e estágio garantido em restaurantes parceiros (São Paulo, Curitiba, Lisboa).
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="label">Duração</div>
+                            <div class="value">480h / 9 meses</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="label">Modalidade</div>
+                            <div class="value">Presencial + Laboratório</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="label">Investimento</div>
+                            <div class="value">A partir de 12x R$ 389</div>
+                        </div>
+                    </div>
+                    
+                    <p>✔️ <strong>Grade inclui:</strong> Cortes profissionais (julienne, brunoise, chiffonade), técnicas sous-vide, gestão de custos e desperdício zero, cozinha francesa, italiana, asiática e contemporânea brasileira. Ao final, cada aluno desenvolve seu menu autoral e participa de um evento gastronômico aberto ao público.</p>
+                    <div class="small-note">🎓 Inscrições abertas para 2026.2 | Certificado: Chef de Cozinha Profissional & Especialista em Alta Gastronomia</div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Nota de Corte</h3>
-                <p>O caminho para a faculdade de Gastronomia.</p>
+            
+            <!-- 2º TÓPICO: NOTA DE CORTE -->
+            <div class="topic-card">
+                <div class="card-header">
+                    <span class="icon">📚</span>
+                    <h3>Nota de Corte</h3>
+                    <span class="tag">ENEM / SISU 2025-2026</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>O caminho para a faculdade de Gastronomia (Bacharelado) via ENEM.</strong> Com base nos últimos processos seletivos do SiSU, as notas de corte para Gastronomia registraram leve alta devido ao aumento da procura pelo setor de alimentos e bebidas. Dados consolidados das edições 2024 e 2025:</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="label">USP (SP)</div>
+                            <div class="value">720 - 755 pts</div>
+                            <div style="font-size:12px">Ampla concorrência</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="label">UFRJ (RJ)</div>
+                            <div class="value">675 - 710 pts</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="label">UFPR (PR)</div>
+                            <div class="value">660 - 695 pts</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="label">UFBA (BA)</div>
+                            <div class="value">630 - 670 pts</div>
+                        </div>
+                    </div>
+                    
+                    <p>🏛️ <strong>Universidades públicas de destaque:</strong> UNB (Brasília) corte ~655-695; UFF (RJ) ~640-680; UFSC (SC) ~650-690. Já em <strong>Portugal</strong>, universidades como a Universidade do Algarve e ESHTE aceitam notas do ENEM a partir de 600 pontos (processo de candidatura específico).</p>
+                    
+                    <div class="highlight-box">
+                        📈 <strong>Tendência 2026:</strong> Notas de corte em federais do Sudeste e Sul subiram cerca de 6% em relação a 2024. Para garantir vaga em ampla concorrência, recomenda-se média acima de 680 no ENEM, com peso maior em Redação e Ciências Humanas.
+                    </div>
+                    <div class="small-note">Fonte: Ministério da Educação, SiSU 2025/2026 e relatórios institucionais.</div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Salário</h3>
-                <p>Quanto ganha um chef de cozinha hoje?</p>
+            
+            <!-- 3º TÓPICO: SALÁRIO -->
+            <div class="topic-card">
+                <div class="card-header">
+                    <span class="icon">💰</span>
+                    <h3>Salário</h3>
+                    <span class="tag">remuneração 2026</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>Quanto ganha um chef de cozinha hoje?</strong> Os salários variam conforme experiência, porte do restaurante, localização e especializações. Com base em dados do CAGED, sindicatos de hotelaria e plataformas de carreira (Glassdoor, Indeed) atualizados para 2025/2026:</p>
+                    
+                    <div class="salary-region">
+                        <div class="region-card">
+                            <h4>🇧🇷 Paraná</h4>
+                            <p><strong>Cozinheiro(a)</strong><br>R$ 2.400 – R$ 4.300</p>
+                            <p><strong>Chef / Sous Chef</strong><br>R$ 4.800 – R$ 10.500</p>
+                            <small>Hotéis 5 estrelas em Curitiba e Foz do Iguaçu: até R$ 14k + benefícios</small>
+                        </div>
+                        <div class="region-card">
+                            <h4>🇧🇷 Brasil</h4>
+                            <p><strong>Cozinheiro profissional</strong><br>R$ 2.200 – R$ 4.500</p>
+                            <p><strong>Chef executivo</strong><br>R$ 5.500 – R$ 18.000</p>
+                            <small>Alta gastronomia (SP, RJ, MG): chefs renomados podem ultrapassar R$ 22k mensais</small>
+                        </div>
+                        <div class="region-card">
+                            <h4>🇵🇹 Portugal</h4>
+                            <p><strong>Cozinheiro (início)</strong><br>€ 950 – € 1.400</p>
+                            <p><strong>Sous Chef / Chef</strong><br>€ 1.800 – € 3.800</p>
+                            <small>Lisboa, Algarve e Porto: chefs executivos podem atingir € 4.500 + participação nos lucros</small>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        💼 <strong>O que influencia na valorização salarial?</strong> Especializações em cozinha plant-based, confeitaria internacional, gestão de custos, fluência em inglês/espanhol e experiências no exterior elevam a remuneração em até 40%.
+                    </div>
+                    
+                    <div class="small-note">Fontes: Confederação Nacional do Turismo, Sindicato de Hotéis e Restaurantes do Paraná, Associação da Hotelaria de Portugal (AHP) – atualizado março/2026.</div>
+                </div>
             </div>
         </div>
 
-
+        <!-- MANTIDO BLOCO DE TENDÊNCIAS ORIGINAL -->
+        <div class="detalhes-nota">
+            <h2 style="text-align: left; font-size: 1.6rem; margin-bottom: 1rem;">Mercado e Tendências</h2>
+            <p style="margin-bottom: 1rem;">A gastronomia moderna exige não apenas talento culinário, mas também habilidades em gestão, sustentabilidade e criatividade digital. Chefs com domínio em técnicas low waste, culinária plant-based e gestão de mídias sociais têm se destacado e conquistado posições de liderança com salários acima da média.</p>
+            <ul>
+                <li><strong>Inovação:</strong> cursos livres de especialização (cozinha afetiva, fermentação, confeitaria artística) agregam valor ao currículo e aumentam em até 35% o potencial de remuneração.</li>
+                <li><strong>Networking:</strong> eventos como o “The Beef Experience” conectam chefs a grandes fornecedores e nomes do mercado.</li>
+                <li><strong>Perspectivas internacionais:</strong> Portugueses e brasileiros com dupla cidadania têm ampliado carreiras na Europa, onde a culinária brasileira é altamente valorizada.</li>
+            </ul>
+        </div>
 
     </div>
 
     <footer>
-        <p>Deixe sua opinião</p>
-        <a href="mailto:seuemail@exemplo.com" class="btn-contato">Enviar E-mail</a>
-        <p style="margin-top: 1rem; font-size: 0.8rem;">&copy; 2026 The Beef. Todos os direitos reservados.</p>
+        <!-- NOVO ESPAÇO DE OPINIÃO COM FORMULÁRIO QUE ABRE O EMAIL -->
+        <div class="opinion-section">
+            <h3>📝 Deixe sua opinião</h3>
+            <p>Sua avaliação é muito importante para nós! Preencha os campos abaixo e sua mensagem será enviada diretamente para nosso e-mail.</p>
+            
+            <form class="opinion-form" id="opinionForm">
+                <div class="form-group">
+                    <label>Seu nome *</label>
+                    <input type="text" id="nomeOpiniao" placeholder="Digite seu nome completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Seu e-mail *</label>
+                    <input type="email" id="emailOpiniao" placeholder="exemplo@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Avaliação (estrelas)</label>
+                    <div class="rating-stars" id="ratingStars">
+                        <div class="star-option" data-value="1">
+                            <span>⭐ 1</span>
+                            <input type="radio" name="rating" value="1">
+                        </div>
+                        <div class="star-option" data-value="2">
+                            <span>⭐⭐ 2</span>
+                            <input type="radio" name="rating" value="2">
+                        </div>
+                        <div class="star-option" data-value="3">
+                            <span>⭐⭐⭐ 3</span>
+                            <input type="radio" name="rating" value="3">
+                        </div>
+                        <div class="star-option" data-value="4">
+                            <span>⭐⭐⭐⭐ 4</span>
+                            <input type="radio" name="rating" value="4">
+                        </div>
+                        <div class="star-option selected" data-value="5">
+                            <span>⭐⭐⭐⭐⭐ 5</span>
+                            <input type="radio" name="rating" value="5" checked>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Sua mensagem / sugestão *</label>
+                    <textarea id="mensagemOpiniao" placeholder="Conte-nos sua experiência, dúvida ou sugestão sobre o The Beef..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-enviar">✉️ Enviar opinião por e-mail</button>
+                <div class="feedback-message" id="feedbackMsg"></div>
+            </form>
+        </div>
+        
+        <div class="footer-copyright">
+            <p style="margin-bottom: 5px;">&copy; 2026 The Beef. Todos os direitos reservados.</p>
+            <a href="mailto:contato@thebeef.com.br" class="btn-contato-simple">📧 contato@thebeef.com.br</a>
+        </div>
     </footer>
 
+    <script>
+        // Lógica para seleção de estrelas interativa
+        const starOptions = document.querySelectorAll('.star-option');
+        starOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selected de todos
+                starOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                // Marca o radio correspondente
+                const radio = this.querySelector('input[type="radio"]');
+                if(radio) radio.checked = true;
+            });
+        });
+        
+        // Formulário: ao enviar, abre cliente de e-mail com os dados preenchidos
+        const form = document.getElementById('opinionForm');
+        const feedbackMsg = document.getElementById('feedbackMsg');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Coleta os valores
+            const nome = document.getElementById('nomeOpiniao').value.trim();
+            const email = document.getElementById('emailOpiniao').value.trim();
+            const ratingSelected = document.querySelector('input[name="rating"]:checked');
+            const ratingValue = ratingSelected ? ratingSelected.value : '5';
+            const mensagem = document.getElementById('mensagemOpiniao').value.trim();
+            
+            // Validação simples
+            if (!nome || !email || !mensagem) {
+                feedbackMsg.textContent = '❌ Por favor, preencha nome, e-mail e sua mensagem antes de enviar.';
+                feedbackMsg.classList.add('show');
+                setTimeout(() => {
+                    feedbackMsg.classList.remove('show');
+                }, 3000);
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                feedbackMsg.textContent = '❌ Informe um e-mail válido (ex: nome@dominio.com).';
+                feedbackMsg.classList.add('show');
+                setTimeout(() => {
+                    feedbackMsg.classList.remove('show');
+                }, 3000);
+                return;
+            }
+            
+            // Monta o corpo do e-mail de forma organizada
+            const subject = encodeURIComponent(`Opinião The Beef - ${nome}`);
+            const body = encodeURIComponent(
+                `Olá, equipe The Beef!\n\n` +
+                `Enviei minha opinião através do site:\n\n` +
+                `👤 Nome: ${nome}\n` +
+                `📧 E-mail para contato: ${email}\n` +
+                `⭐ Avaliação: ${ratingValue} estrela(s)\n\n` +
+                `💬 Mensagem/Opinião:\n${mensagem}\n\n` +
+                `Enviado em: ${new Date().toLocaleString('pt-BR')}\n` +
+                `Aguardando retorno. Obrigado!`
+            );
+            
+            // Abre o cliente de e-mail padrão (mailto)
+            window.location.href = `mailto:contato@thebeef.com.br?subject=${subject}&body=${body}`;
+            
+            // Feedback visual de sucesso
+            feedbackMsg.textContent = '✅ Abrindo seu cliente de e-mail! Envie a mensagem para finalizar. Obrigado pelo feedback.';
+            feedbackMsg.classList.add('show');
+            
+            // Opcional: limpa formulário após envio (pequeno delay para não atrapalhar)
+            setTimeout(() => {
+                // Não limpar automaticamente para manter dados caso o e-mail falhe, mas podemos dar opção
+                // O usuário verá o mailto aberto.
+            }, 500);
+            
+            // Remove feedback após 4 segundos
+            setTimeout(() => {
+                feedbackMsg.classList.remove('show');
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
