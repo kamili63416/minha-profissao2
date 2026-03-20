@@ -155,15 +155,15 @@
         <div class="grid-especialidades">
             <div class="card">
                 <h3>Curso de chef</h3>
-                <p>Como se tornar um chefe de cozinha?</p>
+                <p>Um curso de chef de cozinha (ou gastronomia) prepara profissionais para atuar na área culinária, focando em técnicas, gestão e criatividade. Os cursos variam de profissionalizantes rápidos a graduações superiores (tecnólogo ou bacharelado).<p>
             </div>
             <div class="card">
                 <h3>Nota de corte</h3>
-                <p>Faculdade de Gastronomia</p>
+                <p>no Sisu gira em torno de 638 pontos, com variações entre 576 (IFCE) e 703+ (UFRJ) para universidades públicas</p>
             </div>
             <div class="card">
                 <h3>Salario</h3>
-                <p>Quanto guanha um chef de cozinha?</p>
+                <p>R$ 2.500 e R$ 10.000 por mês, com média nacional estimada em cerca de R$ 4.000 a R$ 4.500</p>
             </div>
         </div>
 
